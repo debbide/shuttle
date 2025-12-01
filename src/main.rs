@@ -390,7 +390,7 @@ async fn generate_links() {
     println!("\n");
     println!("{}", sub_content);
 
-    for file in ["list.txt", "boot.log", "config.json", "tunnel.json", "tunnel.yml"].iter() {
+    for file in ["boot.log", "config.json", "tunnel.json", "tunnel.yml"].iter() {
         let file_path_full = format!("{}/{}", file_path, file);
         let _ = fs::remove_file(file_path_full);
     }
