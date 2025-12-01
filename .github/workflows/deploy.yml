@@ -30,9 +30,8 @@ jobs:
       - name: Create Secrets.toml from GitHub Secrets
         env:
           UUID: ${{ secrets.UUID }}
-          NEZHA_SERVER: ${{ secrets.NEZHA_SERVER }}
-          NEZHA_PORT: ${{ secrets.NEZHA_PORT }}
-          NEZHA_KEY: ${{ secrets.NEZHA_KEY }}
+          KOMARI_HOST: ${{ secrets.KOMARI_HOST }}
+          KOMARI_TOKEN: ${{ secrets.KOMARI_TOKEN }}
           ARGO_DOMAIN: ${{ secrets.ARGO_DOMAIN }}
           ARGO_AUTH: ${{ secrets.ARGO_AUTH }}
           ARGO_PORT: ${{ secrets.ARGO_PORT }}
@@ -43,9 +42,8 @@ jobs:
           SUB_PATH: ${{ secrets.SUB_PATH }}
         run: |
           echo "UUID = '${UUID:-86ecdec6-59a2-42bc-8d29-6887c0956b1e}'" >> Secrets.toml
-          echo "NEZHA_SERVER = '${NEZHA_SERVER}'" >> Secrets.toml
-          echo "NEZHA_PORT = '${NEZHA_PORT}'" >> Secrets.toml
-          echo "NEZHA_KEY = '${NEZHA_KEY}'" >> Secrets.toml
+          echo "KOMARI_HOST = '${KOMARI_HOST}'" >> Secrets.toml
+          echo "KOMARI_TOKEN = '${KOMARI_TOKEN}'" >> Secrets.toml
           echo "ARGO_DOMAIN = '${ARGO_DOMAIN}'" >> Secrets.toml
           echo "ARGO_AUTH = '${ARGO_AUTH}'" >> Secrets.toml
           echo "ARGO_PORT = '${ARGO_PORT:-8080}'" >> Secrets.toml
